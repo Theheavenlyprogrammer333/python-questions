@@ -1,3 +1,6 @@
+ 
+print("Techobytes Technologies, Galaxy Diamond Plaza")
+
 print("list questions hihi")
 # Q1 perform basic list operations
 # Access the third element of a list
@@ -287,4 +290,85 @@ if lst_rev == lst :
     print("the list is palindorome")
 else : 
     print("list not palindrome")
+
+# Q 30. Find All Common Elements Between Three Lists 
+print("Q30")
+def find_common(lst1,lst2,lst3):
+    common = set(lst1) & set(lst2) & set(lst3)
+    return list(common)
+
+
+lst1=[2,30,57,1,67,92]
+lst2=[1,67,900,300,920]
+lst3=[1,67,909023,233,1233,4232]
+
+result=find_common(lst1,lst2,lst3)
+print(result)
+
+
+#Q 31 filter strings by length in a list
+print("Q31")
+lst=['laptop','mobile','cam','bazooka','granade','guns','lolipop','choclate']
+
+ 
+
+filtered = [k for k in lst if len(k) > 6]#any string longer than length of 6 shall be printed
+
+
+print(filtered)
+ 
+
+# Q  32 Check if List is Sorted 
+print("Q32")
+lst = [1, 2, 3, 4, 5]
+
+is_sorted = True 
+
+for i in range(len(lst) - 1):
+    if lst[i] > lst[i + 1]:# if the previous element is bigger
+        is_sorted = False
+        break
+
+if is_sorted:
+    print("List is sorted")
+else:
+    print("List is not sorted")
+
+# Q 33. List to Dictionary Conversion
+def lists_to_dict(keys, values):
+    # Zip pairs the elements, dict() converts pairs to key-value entries
+    return dict(zip(keys, values))
+
+# Test the function
+fields = ["name", "age", "city"]
+data = ["Alice", 25, "New York"]
+result = lists_to_dict(fields, data)
+
+print(f"Keys: {fields}")
+print(f"Values: {data}")
+print(f"Resulting Dict: {result}")
+
+#Q 34. Find the Difference Between Two Lists
+lst1=[1,2,3,54,65,76]
+lst2=[1,2,800,900,700,500]
+for i in lst1:
+    if i not in lst2:
+        print(i)
+     
+
+
+# Q  35. Remove Negative Numbers In-place 
+print("Q35")
+lst=[-90,-80,54,24,65,-78,-97]
+
+for i in range(len(lst) -1 , -1 , -1):
+    if lst[i] < 0 :
+        del lst[i]
+print(lst)
+
+# Q 36. Extend Nested List by Adding a Sublist
+print("Q36")
+fru=[['apple', 'banana'], ['cherry', 'date']]
+fru[1].append("cranberry")
+print(fru)
 
